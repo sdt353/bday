@@ -1,0 +1,165 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #06031d;
+}
+.bday{
+margin-top: 80px;
+text-align: center;
+background: linear-gradient(180deg, #f80112 0%, #2602f5 110%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+cursor: pointer;
+font-size: 80px;
+font-family: bday;
+}
+.bday:hover{
+    -webkit-box-reflect: below -8px -webkit-gradient(linear, right top, right bottom, from(transparent),
+     color-stop(85%, transparent), to(rgba(42, 99, 99, 1))) ;
+}
+.name{
+padding-right: 100px;
+margin-left: 218px;
+margin-top: 60px;
+text-align: center;
+background: linear-gradient(180deg, #f80112 0%, #2602f5 110%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+cursor: pointer;
+font-size: 180px;
+font-family: bday;
+display: inline-block;
+}
+.name:hover{
+-webkit-box-reflect: below -8px -webkit-gradient(linear, right top, right bottom, from(transparent),
+ color-stop(85%, transparent), to(rgba(42, 99, 99, 1))) ;
+}
+.date{
+margin-top: 150px;
+text-align: center;
+background: linear-gradient(180deg, #f80112 0%, #2602f5 110%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+cursor: pointer;
+font-size: 60px;
+font-family: cursive;
+}
+.wrapper{
+position: relative;
+width: 320px;
+margin: 150px auto;
+perspective: 1000px;
+margin-bottom: 500px;
+}
+.img-area{
+position: absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transform: rotateY(-360deg) translateZ(-300px);
+animation: animate 25s steps(1000, end) infinite;
+}
+.single-img{
+position: absolute;
+width: 300px;
+height: 200px;
+top: 10px;
+left: 10px;
+}
+.single-img img{
+width: 300px;
+height: 200px;
+border: 5px solid #fff;
+}
+.single-img.img-one{
+transform: rotateY(0deg) translateZ(300px);
+}
+.single-img.img-two{
+    transform: rotateY(60deg) translateZ(300px);
+    }
+.single-img.img-three{
+        transform: rotateY(120deg) translateZ(300px);
+        }
+.single-img.img-four{
+transform: rotateY(180deg) translateZ(300px);
+}
+.single-img.img-five{
+    transform: rotateY(240deg) translateZ(300px);
+    }
+.single-img.img-six{
+        transform: rotateY(300deg) translateZ(300px);
+        }
+img{
+filter: grayscale(90%);
+transition: 1s;
+cursor: pointer;
+}
+img:hover{
+transition: 1s;
+filter: grayscale(0);
+}
+@keyframes animate{
+from{
+transform: rotateY(-360deg);
+}
+to{
+    transform: rotateY(0deg);
+}
+}
+@font-face{
+font-family: bday;
+src: url(bday.ttf);
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    color: white;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 17px;
+    color: white;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: white;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+    color: white;
+}
